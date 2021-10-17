@@ -28,14 +28,14 @@ def demo4(bot,update):
   bot.message.reply_text('Fan turned off')
 
 def main(bot,update):
-  a= bot.message.text
-  if a =="Turn on light":
+  a= bot.message.text.lower()
+  if a =="turn on light":
     demo1(bot,update)
-  elif a =="Turn off light":
+  elif a =="turn off light":
     demo2(bot,update)
-  elif a =="Turn on fan":
+  elif a =="turn on fan":
     demo3(bot,update)
-  elif a =="Turn off fan":
+  elif a =="turn off fan":
     demo4(bot,update)
 
 bot_token = '1982159235:AAH7rqKN9Uw-kQ9yE_cFSxnZsDga05cs9Pk'
