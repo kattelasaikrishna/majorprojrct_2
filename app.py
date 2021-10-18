@@ -30,7 +30,7 @@ def main(bot,update):
   a= bot.message.text.lower()
   if a =="turn on light":
     demo1(bot,update)
-  elif a =="turn off light":
+  elif a =="turn off light": 
     demo2(bot,update)
   elif a =="turn on fan":
     demo3(bot,update)
