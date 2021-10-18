@@ -1,6 +1,5 @@
 from Adafruit_IO import Client
 import os
-
 username_1 = os.getenv('Username')
 key_1 =os.getenv('Key')
 
