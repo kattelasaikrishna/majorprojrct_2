@@ -1,9 +1,12 @@
-from Adafruit_IO import Client
 import os
-username_1 = os.getenv('Username')
-key_1 =os.getenv('Key')
+#pip install adafruit-io
+from Adafruit_IO import Client
+username = os.getenv('username')
+key = os.getenv('key')
+token=os.getenv('token')
+aio = Client(username,key)
+#pip install python-telegram-bot==13.0
 
-aio = Client(username_1, key_1)
 from telegram.ext import Updater, MessageHandler, Filters
 
 def demo1(bot,update):
@@ -32,13 +35,13 @@ def main(bot,update):
     demo1(bot,update)
   elif a=='lights off' or a==' turn off lights' or a==' turn lights off' or a==' turn off light' or a=='off light' or a=='light off' or a=='off lights' :
     demo2(bot,update)
-  elif a=='fans on' or a==' turn on fans' or a==' turn fans on' or a==' turn on fan' or a=='on fan' or a=='fan on ' or a=='on fans' :
+  elif a=='lights off' or a==' turn off lights' or a==' turn lights off' or a==' turn off light' or a=='off light' or a=='light off' or a=='on fans' :
     demo3(bot,update)
   elif a=='fans off' or a==' turn off fans' or a=='turn fans off' or a==' turn fan off ' or a=='off fan' or a=='fan off'  or a=='off fans' :
     demo4(bot,update)
 
 
-bot_token ='2060580694:AAF0H6Ri0hzY7tf5BhjCdBRuuzsuOOufD_4'
+bot_token = token
 u = Updater(bot_token,use_context=True)
 dp=u.dispatcher
 dp.add_handler(MessageHandler(Filters.text,main))
